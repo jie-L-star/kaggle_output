@@ -1,7 +1,7 @@
 from github import Github
 import os
 
-token = "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"
+token = "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"
 g = Github(token)
 
 repo_name = "kaggle_output"
