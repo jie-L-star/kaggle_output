@@ -103,8 +103,8 @@ Model.to(device)
 
 # 网络超参数
 # 32->64
-train_batch_size = 256
-test_batch_size = 256
+train_batch_size = 64
+test_batch_size = 64
 lr = 0.01
 num_epoch = 500
 momentum = 0.8
