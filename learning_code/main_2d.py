@@ -110,6 +110,7 @@ num_epoch = 500
 momentum = 0.8
 MinTrainLoss = 1e8
 
+
 # 定义数据加载器，将训练集进行批处理
 train_nots_loader = DataLoader(
     dataset=train_data_nots,
