@@ -742,9 +742,9 @@ class cnn3(nn.Module):
         self.relu = nn.ReLU()
         self.S = nn.Sigmoid()
         self.fc1 = nn.Linear(1024, 512, dtype=torch.float64)
-        self.fc2 = nn.Linear(512, 512, dtype=torch.float64)
-        self.fc3 = nn.Linear(512, 256, dtype=torch.float64)
-        self.fc4 = nn.Linear(256, 2, dtype=torch.float64)
+        self.fc2 = nn.Linear(512, 256, dtype=torch.float64)
+        self.fc3 = nn.Linear(256, 128, dtype=torch.float64)
+        self.fc4 = nn.Linear(128, 2, dtype=torch.float64)
         # self.lstm = LSTM4(4096, 64,200,128)
 
 
@@ -803,7 +803,7 @@ class cnn_ANGLE(nn.Module):
         self.fc1 = nn.Linear(1024, 512, dtype=torch.float64)
         self.fc2 = nn.Linear(512, 512, dtype=torch.float64)
         self.fc3 = nn.Linear(512, 256, dtype=torch.float64)
-        self.fc4 = nn.Linear(128, 1, dtype=torch.float64)
+        self.fc4 = nn.Linear(256, 1, dtype=torch.float64)
         # self.lstm = LSTM4(4096, 64,200,128)
 
 
