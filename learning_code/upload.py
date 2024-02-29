@@ -15,6 +15,23 @@ def my_upload(token):
         ".jpg": "los_image_files"
     }
 
+    # 创建文件夹
+    folder_names = folder_mapping.values()
+    contents = repo.get_contents("")
+
+    for folder_name in folder_names:
+        folder_exists = False
+        # 遍历仓库中的内容，检查是否存在特定名称的文件夹
+        for content in contents:
+            if content.type == "dir" and content.path == folder_name:
+                folder_exists = True
+                break
+
+        if not folder_exists:
+            # 如果文件夹不存在，则创建新文件夹
+            repo.create_file(folder_name, "Creating folder", "")
+
+    # 保存文件到github
     local_folder = "/kaggle/working/"
     for file_name in os.listdir(local_folder):
         if os.path.isfile(os.path.join(local_folder, file_name)):
