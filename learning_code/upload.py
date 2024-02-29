@@ -2,10 +2,8 @@ from github import Github
 import os
 
 
-def my_upload(token):
+def my_upload(token, repo_name):
     g = Github(token)
-
-    repo_name = "kaggle_output"
     repo = g.get_user().get_repo(repo_name)
 
     # 定义文件夹和文件类型的映射关系
